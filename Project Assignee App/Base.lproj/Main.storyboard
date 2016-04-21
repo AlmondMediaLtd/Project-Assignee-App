@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ko2-jD-uAI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rLI-LB-RcM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -147,16 +147,16 @@
             </objects>
             <point key="canvasLocation" x="-968" y="-654"/>
         </scene>
-        <!--Taks-->
+        <!--Tasks-->
         <scene sceneID="zAq-eE-Hgg">
             <objects>
-                <tableViewController title="Taks" id="ybt-0K-pCU" sceneMemberID="viewController">
+                <tableViewController title="Tasks" id="ybt-0K-pCU" customClass="TasksTableViewController" customModule="Project_Assignee_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="h6o-fu-3jU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zx6-ZC-zmz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="task-cell" id="zx6-ZC-zmz">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zx6-ZC-zmz" id="Kl6-UJ-LfX">
@@ -182,7 +182,7 @@
         <!--Task-->
         <scene sceneID="w1A-cQ-wJA">
             <objects>
-                <viewController title="Task" id="2GX-Od-BgD" sceneMemberID="viewController">
+                <viewController title="Task" id="2GX-Od-BgD" customClass="CurrentTaskViewController" customModule="Project_Assignee_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pbZ-uF-XFe"/>
                         <viewControllerLayoutGuide type="bottom" id="GaR-sE-k2c"/>
@@ -304,13 +304,13 @@
         <!--Activities-->
         <scene sceneID="lAJ-1L-QX6">
             <objects>
-                <tableViewController title="Activities" id="kjN-mi-QJ7" sceneMemberID="viewController">
+                <tableViewController title="Activities" id="kjN-mi-QJ7" customClass="ActivityTableViewController" customModule="Project_Assignee_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TUF-tH-jTm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iaQ-GX-gFU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activity-cell" id="iaQ-GX-gFU">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iaQ-GX-gFU" id="jhE-JL-eFa">
@@ -360,7 +360,7 @@
         <!--Activity-->
         <scene sceneID="NrQ-uJ-Quu">
             <objects>
-                <viewController title="Activity" id="hvf-7L-GHP" sceneMemberID="viewController">
+                <viewController title="Activity" id="hvf-7L-GHP" customClass="CurrentActivityViewController" customModule="Project_Assignee_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AsW-mT-rJw"/>
                         <viewControllerLayoutGuide type="bottom" id="TUx-pJ-4PE"/>
@@ -390,7 +390,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-fR-LuG">
-                                        <rect key="frame" x="0.0" y="102" width="560" height="54"/>
+                                        <rect key="frame" x="0.0" y="141" width="560" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f16-eE-dAF">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="27"/>
@@ -407,7 +407,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vW8-ra-jeJ">
-                                        <rect key="frame" x="0.0" y="204" width="560" height="54"/>
+                                        <rect key="frame" x="0.0" y="282" width="560" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVf-xC-u4C">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="27"/>
@@ -423,10 +423,6 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOC-PM-FKd">
-                                        <rect key="frame" x="230" y="306" width="100" height="30"/>
-                                        <state key="normal" title="View Activities"/>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="HCc-fR-LuG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eCJ-KC-ii0" secondAttribute="bottom" constant="20" id="EKP-uB-01J"/>
@@ -463,7 +459,7 @@
         <!--Add Activity-->
         <scene sceneID="eTj-2f-rnw">
             <objects>
-                <viewController title="Add Activity" id="Ko2-jD-uAI" sceneMemberID="viewController">
+                <viewController title="Add Activity" id="Ko2-jD-uAI" customClass="AddActivityViewController" customModule="Project_Assignee_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ATg-1n-YdY"/>
                         <viewControllerLayoutGuide type="bottom" id="cpd-1C-c9g"/>
