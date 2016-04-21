@@ -9,6 +9,12 @@
 import UIKit
 
 class CurrentActivityViewController: UIViewController {
+    
+    @IBOutlet weak var activityTitle: UILabel!
+    
+    @IBOutlet weak var activityDueDate: UILabel!
+    
+    @IBOutlet weak var activityCost: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

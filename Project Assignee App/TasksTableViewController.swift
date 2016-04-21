@@ -9,9 +9,23 @@
 import UIKit
 
 class TasksTableViewController: UITableViewController {
+    
+    var tasks = [Task]()
+    
+    func generateTaks() {
+        
+        tasks.append(Task(title: "Build the kitchen", dueDate: "20th July 2016", budget: 300.56, assigneeId: "0000", planner: "Mr Joseph"))
+        
+        tasks.append(Task(title: "Build the bedroom", dueDate: "25th July 2016", budget: 405.26, assigneeId: "0000", planner: "Mr Joseph"))
+        
+        tasks.append(Task(title: "Build the sitting room", dueDate: "30th July 2016", budget: 1000.92, assigneeId: "0000", planner: "Mr Joseph"))
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        generateTaks()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,17 +48,39 @@ class TasksTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return tasks.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("task-cell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = tasks[indexPath.row].title
+        
+        cell.detailTextLabel?.text = tasks[indexPath.row].dueDate
 
         return cell
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "show task" {
+            
+            if let indexPath = self.tableView?.indexPathForSelectedRow {
+                
+                print(indexPath)
+                
+                let currentTaskVc: CurrentTaskViewController = segue.destinationViewController as! CurrentTaskViewController
+                
+                currentTaskVc.taskTitleHolder = tasks[indexPath.row].title
+                
+                currentTaskVc.taskDateHolder = tasks[indexPath.row].dueDate
+                
+                currentTaskVc.taskBudgetHolder = tasks[indexPath.row].budget
+                
+                currentTaskVc.taskPlannerHolder = tasks[indexPath.row].planner
+            }
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

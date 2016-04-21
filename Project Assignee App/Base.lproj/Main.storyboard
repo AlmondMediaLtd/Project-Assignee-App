@@ -164,7 +164,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="2GX-Od-BgD" kind="show" id="hXi-5r-5Tg"/>
+                                    <segue destination="2GX-Od-BgD" kind="show" identifier="show task" id="hXi-5r-5Tg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -182,7 +182,7 @@
         <!--Task-->
         <scene sceneID="w1A-cQ-wJA">
             <objects>
-                <viewController title="Task" id="2GX-Od-BgD" customClass="CurrentTaskViewController" customModule="Project_Assignee_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="currentTask" title="Task" id="2GX-Od-BgD" customClass="CurrentTaskViewController" customModule="Project_Assignee_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pbZ-uF-XFe"/>
                         <viewControllerLayoutGuide type="bottom" id="GaR-sE-k2c"/>
@@ -296,6 +296,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Task" id="tBw-le-c8S"/>
+                    <connections>
+                        <outlet property="taskBudget" destination="u7y-9g-cBw" id="hLG-sY-G9M"/>
+                        <outlet property="taskDueDate" destination="RPn-kW-aUH" id="I5T-SL-f16"/>
+                        <outlet property="taskPlanner" destination="b61-uS-hV7" id="hel-zV-BQe"/>
+                        <outlet property="taskTitle" destination="v7Y-FQ-kd7" id="REC-gM-Xuq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Txt-cy-vPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -451,6 +457,11 @@
                     <navigationItem key="navigationItem" title="Activity" id="k1J-w4-Ep5">
                         <barButtonItem key="rightBarButtonItem" title="Completed?" id="pMF-yI-sjz"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityCost" destination="RSJ-Rl-v7h" id="PMI-pd-iXO"/>
+                        <outlet property="activityDueDate" destination="XV1-dp-mFF" id="uS3-uF-NW9"/>
+                        <outlet property="activityTitle" destination="eqn-Xp-k6s" id="r9I-Hk-CB0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4j-YY-7zE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,6 +530,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Activity" id="vIf-Ql-Wh7"/>
+                    <connections>
+                        <outlet property="addActivityCost" destination="ppw-fp-1Ma" id="gdo-8K-ES4"/>
+                        <outlet property="addActivityDueDate" destination="1fu-qm-nJb" id="dmd-r1-nS8"/>
+                        <outlet property="addActivityTitle" destination="w47-xL-PU8" id="b7C-uF-8Ep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WG5-ID-xdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

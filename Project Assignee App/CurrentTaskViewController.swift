@@ -9,9 +9,30 @@
 import UIKit
 
 class CurrentTaskViewController: UIViewController {
+    
+    @IBOutlet weak var taskTitle: UILabel!
+    
+    var taskTitleHolder = ""
+    
+    @IBOutlet weak var taskDueDate: UILabel!
+    
+    var taskDateHolder = ""
+    
+    @IBOutlet weak var taskBudget: UILabel!
+    
+    var taskBudgetHolder = 0.0
 
+    @IBOutlet weak var taskPlanner: UILabel!
+    
+    var taskPlannerHolder = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        taskTitle.text = taskTitleHolder
+        taskDueDate.text = taskDateHolder
+        taskBudget.text = "£\(taskBudgetHolder)"
+        taskPlanner.text = taskPlannerHolder
 
         // Do any additional setup after loading the view.
     }

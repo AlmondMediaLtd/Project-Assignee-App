@@ -16,6 +16,7 @@
 		BE88FAC91CC9451C003FDAF6 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88FAC81CC9451C003FDAF6 /* ActivityTableViewController.swift */; };
 		BE88FACB1CC94545003FDAF6 /* CurrentActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88FACA1CC94545003FDAF6 /* CurrentActivityViewController.swift */; };
 		BE88FACE1CC9458A003FDAF6 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88FACD1CC9458A003FDAF6 /* AddActivityViewController.swift */; };
+		BE88FAD01CC94B39003FDAF6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88FACF1CC94B39003FDAF6 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BE88FAC81CC9451C003FDAF6 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
 		BE88FACA1CC94545003FDAF6 /* CurrentActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentActivityViewController.swift; sourceTree = "<group>"; };
 		BE88FACD1CC9458A003FDAF6 /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		BE88FACF1CC94B39003FDAF6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				BE748DB21CC6A36200DD7281 /* AppDelegate.swift */,
 				BE748DB61CC6A36200DD7281 /* Main.storyboard */,
+				BE88FACF1CC94B39003FDAF6 /* Model.swift */,
 				BE88FAC71CC944E3003FDAF6 /* Tasks */,
 				BE88FACC1CC94550003FDAF6 /* Activity */,
 				BE748DB91CC6A36200DD7281 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE88FAD01CC94B39003FDAF6 /* Model.swift in Sources */,
 				BE88FAC91CC9451C003FDAF6 /* ActivityTableViewController.swift in Sources */,
 				BE88FAC41CC944A1003FDAF6 /* TasksTableViewController.swift in Sources */,
 				BE748DB31CC6A36200DD7281 /* AppDelegate.swift in Sources */,

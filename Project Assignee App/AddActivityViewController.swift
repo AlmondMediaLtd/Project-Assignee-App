@@ -9,6 +9,12 @@
 import UIKit
 
 class AddActivityViewController: UIViewController {
+    
+    @IBOutlet weak var addActivityTitle: UITextField!
+    
+    @IBOutlet weak var addActivityDueDate: UITextField!
+    
+    @IBOutlet weak var addActivityCost: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
