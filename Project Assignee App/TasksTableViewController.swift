@@ -11,21 +11,11 @@ import UIKit
 class TasksTableViewController: UITableViewController {
     
     var tasks = [Task]()
-    
-    func generateTaks() {
-        
-        tasks.append(Task(title: "Build the kitchen", dueDate: "20th July 2016", budget: 300.56, assigneeId: "0000", planner: "Mr Joseph"))
-        
-        tasks.append(Task(title: "Build the bedroom", dueDate: "25th July 2016", budget: 405.26, assigneeId: "0000", planner: "Mr Joseph"))
-        
-        tasks.append(Task(title: "Build the sitting room", dueDate: "30th July 2016", budget: 1000.92, assigneeId: "0000", planner: "Mr Joseph"))
-        
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        generateTaks()
+        tasks = Task.generateTaks()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -66,8 +56,6 @@ class TasksTableViewController: UITableViewController {
             
             if let indexPath = self.tableView?.indexPathForSelectedRow {
                 
-                print(indexPath)
-                
                 let currentTaskVc: CurrentTaskViewController = segue.destinationViewController as! CurrentTaskViewController
                 
                 currentTaskVc.taskTitleHolder = tasks[indexPath.row].title
@@ -77,6 +65,8 @@ class TasksTableViewController: UITableViewController {
                 currentTaskVc.taskBudgetHolder = tasks[indexPath.row].budget
                 
                 currentTaskVc.taskPlannerHolder = tasks[indexPath.row].planner
+                
+                currentTaskVc.activities = tasks[indexPath.row].activities
             }
             
         }

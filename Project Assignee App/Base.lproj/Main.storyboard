@@ -266,7 +266,7 @@
                                         <rect key="frame" x="230" y="306" width="100" height="30"/>
                                         <state key="normal" title="View Activities"/>
                                         <connections>
-                                            <segue destination="kjN-mi-QJ7" kind="show" id="PgU-47-ecW"/>
+                                            <segue destination="kjN-mi-QJ7" kind="show" identifier="view activities" id="PgU-47-ecW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -324,7 +324,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hvf-7L-GHP" kind="show" id="n27-ow-3q1"/>
+                                    <segue destination="hvf-7L-GHP" kind="show" identifier="current activity" id="n27-ow-3q1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

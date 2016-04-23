@@ -12,12 +12,22 @@ class CurrentActivityViewController: UIViewController {
     
     @IBOutlet weak var activityTitle: UILabel!
     
+    var titleHolder = ""
+    
     @IBOutlet weak var activityDueDate: UILabel!
     
+    var dateHolder = ""
+    
     @IBOutlet weak var activityCost: UILabel!
+    
+    var costHolder = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityTitle.text = titleHolder
+        activityDueDate.text = dateHolder
+        activityCost.text = "\(costHolder)"
 
         // Do any additional setup after loading the view.
     }

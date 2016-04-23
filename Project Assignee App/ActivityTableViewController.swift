@@ -9,15 +9,12 @@
 import UIKit
 
 class ActivityTableViewController: UITableViewController {
+    
+    var activities: [Activity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,16 +31,37 @@ class ActivityTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return activities.count
     }
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activity-cell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = activities[indexPath.row].title
+        
+        cell.detailTextLabel?.text = activities[indexPath.row].dueDate
 
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "current activity" {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                let currentActivityVc = segue.destinationViewController as! CurrentActivityViewController
+                
+                currentActivityVc.titleHolder = activities[indexPath.row].title
+                
+                currentActivityVc.dateHolder = activities[indexPath.row].dueDate
+                
+                currentActivityVc.costHolder = activities[indexPath.row].cost
+                
+            }
+        }
+        
     }
 
     /*
