@@ -10,31 +10,29 @@ import UIKit
 
 class CurrentTaskViewController: UIViewController {
     
+    var selectedTask: Task = Task()
+    
     var activities: [Activity] = []
     
     @IBOutlet weak var taskTitle: UILabel!
     
-    var taskTitleHolder = ""
     
     @IBOutlet weak var taskDueDate: UILabel!
     
-    var taskDateHolder = ""
     
     @IBOutlet weak var taskBudget: UILabel!
     
-    var taskBudgetHolder = 0.0
 
     @IBOutlet weak var taskPlanner: UILabel!
     
-    var taskPlannerHolder = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        taskTitle.text = taskTitleHolder
-        taskDueDate.text = taskDateHolder
-        taskBudget.text = "£\(taskBudgetHolder)"
-        taskPlanner.text = taskPlannerHolder
+        selectedTask = App.Memory.selectedTask!
+        
+        taskTitle.text = selectedTask.Title
+        taskDueDate.text = "\(selectedTask.EndDate)"
 
         // Do any additional setup after loading the view.
     }
@@ -43,18 +41,5 @@ class CurrentTaskViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Navigation
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "view activities" {
-            let activityTableVc = segue.destinationViewController as! ActivityTableViewController
-            
-            activityTableVc.activities = activities
-        }
-        
-    }
-
 
 }

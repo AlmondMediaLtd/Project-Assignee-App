@@ -9,7 +9,7 @@
 import Foundation
 
 // change date to nsdate
-
+/*
 class Task {
     
     var title: String!
@@ -76,3 +76,4 @@ class Activity {
     
     
 }
+*/

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/*
 class ActivityTableViewController: UITableViewController {
     
     var activities: [Activity] = []
@@ -110,3 +110,4 @@ class ActivityTableViewController: UITableViewController {
     */
 
 }
+*/

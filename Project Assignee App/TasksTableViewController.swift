@@ -15,7 +15,7 @@ class TasksTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tasks = Task.generateTaks()
+        tasks = App.Data.Projects[0].ProjectItems[0].Tasks
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,13 +44,15 @@ class TasksTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("task-cell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = tasks[indexPath.row].title
-        
-        cell.detailTextLabel?.text = tasks[indexPath.row].dueDate
+        cell.textLabel?.text = tasks[indexPath.row].Title
 
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        App.Memory.selectedTask = App.Data.Projects[0].ProjectItems[0].Tasks[indexPath.row]
+    }
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "show task" {
             
@@ -71,6 +73,7 @@ class TasksTableViewController: UITableViewController {
             
         }
     }
+    */
 
     /*
     // Override to support conditional editing of the table view.

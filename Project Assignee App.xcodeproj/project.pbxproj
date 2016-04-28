@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1BE8651CD2821900020CC4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8621CD2821900020CC4 /* DataModel.swift */; };
+		BE1BE8661CD2821900020CC4 /* ModelCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8631CD2821900020CC4 /* ModelCategories.swift */; };
+		BE1BE8671CD2821900020CC4 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8641CD2821900020CC4 /* TemplateModel.swift */; };
+		BE1BE86A1CD282C200020CC4 /* UtilityCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8691CD282C200020CC4 /* UtilityCode.swift */; };
+		BE1BE86C1CD2837100020CC4 /* AppMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE86B1CD2837100020CC4 /* AppMemory.swift */; };
+		BE1BE86E1CD2837B00020CC4 /* CoreExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE86D1CD2837B00020CC4 /* CoreExtensions.swift */; };
+		BE1BE8701CD283BB00020CC4 /* ModelLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE86F1CD283BB00020CC4 /* ModelLogic.swift */; };
+		BE1BE8721CD283C300020CC4 /* AppLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8711CD283C300020CC4 /* AppLogic.swift */; };
+		BE1BE8741CD283CC00020CC4 /* DataLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8731CD283CC00020CC4 /* DataLogic.swift */; };
+		BE1BE8761CD29C6900020CC4 /* SelectedTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8751CD29C6900020CC4 /* SelectedTaskViewController.swift */; };
 		BE748DB31CC6A36200DD7281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE748DB21CC6A36200DD7281 /* AppDelegate.swift */; };
 		BE748DB81CC6A36200DD7281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE748DB61CC6A36200DD7281 /* Main.storyboard */; };
 		BE748DBA1CC6A36200DD7281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE748DB91CC6A36200DD7281 /* Assets.xcassets */; };
@@ -20,6 +30,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE1BE8621CD2821900020CC4 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		BE1BE8631CD2821900020CC4 /* ModelCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCategories.swift; sourceTree = "<group>"; };
+		BE1BE8641CD2821900020CC4 /* TemplateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
+		BE1BE8691CD282C200020CC4 /* UtilityCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityCode.swift; sourceTree = "<group>"; };
+		BE1BE86B1CD2837100020CC4 /* AppMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMemory.swift; sourceTree = "<group>"; };
+		BE1BE86D1CD2837B00020CC4 /* CoreExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreExtensions.swift; sourceTree = "<group>"; };
+		BE1BE86F1CD283BB00020CC4 /* ModelLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLogic.swift; sourceTree = "<group>"; };
+		BE1BE8711CD283C300020CC4 /* AppLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLogic.swift; sourceTree = "<group>"; };
+		BE1BE8731CD283CC00020CC4 /* DataLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLogic.swift; sourceTree = "<group>"; };
+		BE1BE8751CD29C6900020CC4 /* SelectedTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedTaskViewController.swift; sourceTree = "<group>"; };
 		BE748DAF1CC6A36200DD7281 /* Project Assignee App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Assignee App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE748DB21CC6A36200DD7281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE748DB71CC6A36200DD7281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +65,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1BE8611CD281F500020CC4 /* App Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BE8621CD2821900020CC4 /* DataModel.swift */,
+				BE1BE8631CD2821900020CC4 /* ModelCategories.swift */,
+				BE1BE8641CD2821900020CC4 /* TemplateModel.swift */,
+			);
+			name = "App Model";
+			sourceTree = "<group>";
+		};
+		BE1BE8681CD282AC00020CC4 /* App Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BE1BE8691CD282C200020CC4 /* UtilityCode.swift */,
+				BE1BE86B1CD2837100020CC4 /* AppMemory.swift */,
+				BE1BE86D1CD2837B00020CC4 /* CoreExtensions.swift */,
+				BE1BE86F1CD283BB00020CC4 /* ModelLogic.swift */,
+				BE1BE8711CD283C300020CC4 /* AppLogic.swift */,
+				BE1BE8731CD283CC00020CC4 /* DataLogic.swift */,
+			);
+			name = "App Logic";
+			sourceTree = "<group>";
+		};
 		BE748DA61CC6A36200DD7281 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +115,8 @@
 				BE748DB91CC6A36200DD7281 /* Assets.xcassets */,
 				BE748DBB1CC6A36200DD7281 /* LaunchScreen.storyboard */,
 				BE748DBE1CC6A36200DD7281 /* Info.plist */,
+				BE1BE8681CD282AC00020CC4 /* App Logic */,
+				BE1BE8611CD281F500020CC4 /* App Model */,
 			);
 			path = "Project Assignee App";
 			sourceTree = "<group>";
@@ -81,6 +126,7 @@
 			children = (
 				BE88FAC31CC944A1003FDAF6 /* TasksTableViewController.swift */,
 				BE88FAC51CC944D4003FDAF6 /* CurrentTaskViewController.swift */,
+				BE1BE8751CD29C6900020CC4 /* SelectedTaskViewController.swift */,
 			);
 			name = Tasks;
 			sourceTree = "<group>";
@@ -166,11 +212,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1BE8721CD283C300020CC4 /* AppLogic.swift in Sources */,
+				BE1BE8761CD29C6900020CC4 /* SelectedTaskViewController.swift in Sources */,
+				BE1BE8701CD283BB00020CC4 /* ModelLogic.swift in Sources */,
+				BE1BE8741CD283CC00020CC4 /* DataLogic.swift in Sources */,
+				BE1BE86C1CD2837100020CC4 /* AppMemory.swift in Sources */,
+				BE1BE86E1CD2837B00020CC4 /* CoreExtensions.swift in Sources */,
 				BE88FAD01CC94B39003FDAF6 /* Model.swift in Sources */,
+				BE1BE86A1CD282C200020CC4 /* UtilityCode.swift in Sources */,
 				BE88FAC91CC9451C003FDAF6 /* ActivityTableViewController.swift in Sources */,
+				BE1BE8661CD2821900020CC4 /* ModelCategories.swift in Sources */,
 				BE88FAC41CC944A1003FDAF6 /* TasksTableViewController.swift in Sources */,
 				BE748DB31CC6A36200DD7281 /* AppDelegate.swift in Sources */,
+				BE1BE8671CD2821900020CC4 /* TemplateModel.swift in Sources */,
 				BE88FACE1CC9458A003FDAF6 /* AddActivityViewController.swift in Sources */,
+				BE1BE8651CD2821900020CC4 /* DataModel.swift in Sources */,
 				BE88FACB1CC94545003FDAF6 /* CurrentActivityViewController.swift in Sources */,
 				BE88FAC61CC944D4003FDAF6 /* CurrentTaskViewController.swift in Sources */,
 			);
