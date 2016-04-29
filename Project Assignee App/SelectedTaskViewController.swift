@@ -42,9 +42,11 @@ class SelectedTaskViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("activity cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("activity cell", forIndexPath: indexPath) as! ActivityTableViewCell
         
-        cell.textLabel?.text = selectedTask.Activities[indexPath.row].Title
+        let activity = selectedTask.Activities[indexPath.row]
+        
+        cell.activity = activity
         
         return cell
     }

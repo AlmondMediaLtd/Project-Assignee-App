@@ -50,30 +50,8 @@ class TasksTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        App.Memory.selectedTask = App.Data.Projects[0].ProjectItems[0].Tasks[indexPath.row]
+        App.Memory.selectedTask = tasks[indexPath.row]
     }
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "show task" {
-            
-            if let indexPath = self.tableView?.indexPathForSelectedRow {
-                
-                let currentTaskVc: CurrentTaskViewController = segue.destinationViewController as! CurrentTaskViewController
-                
-                currentTaskVc.taskTitleHolder = tasks[indexPath.row].title
-                
-                currentTaskVc.taskDateHolder = tasks[indexPath.row].dueDate
-                
-                currentTaskVc.taskBudgetHolder = tasks[indexPath.row].budget
-                
-                currentTaskVc.taskPlannerHolder = tasks[indexPath.row].planner
-                
-                currentTaskVc.activities = tasks[indexPath.row].activities
-            }
-            
-        }
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.

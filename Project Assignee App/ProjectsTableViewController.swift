@@ -1,20 +1,27 @@
 //
-//  ActivityTableViewController.swift
+//  ProjectsTableViewController.swift
 //  Project Assignee App
 //
-//  Created by Gladwin Dosunmu on 21/04/2016.
+//  Created by Gladwin Dosunmu on 29/04/2016.
 //  Copyright © 2016 Almond Media. All rights reserved.
 //
 
 import UIKit
-/*
-class ActivityTableViewController: UITableViewController {
+
+class ProjectsTableViewController: UITableViewController {
     
-    var activities: [Activity] = []
+    var projects = [Project]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        projects = App.Data.Projects
 
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,37 +38,19 @@ class ActivityTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return activities.count
+        return projects.count
     }
 
-
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("activity-cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("project cell", forIndexPath: indexPath)
 
-        cell.textLabel?.text = activities[indexPath.row].title
-        
-        cell.detailTextLabel?.text = activities[indexPath.row].dueDate
+        cell.textLabel?.text = projects[indexPath.row].Title
 
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "current activity" {
-            
-            if let indexPath = tableView.indexPathForSelectedRow {
-                
-                let currentActivityVc = segue.destinationViewController as! CurrentActivityViewController
-                
-                currentActivityVc.titleHolder = activities[indexPath.row].title
-                
-                currentActivityVc.dateHolder = activities[indexPath.row].dueDate
-                
-                currentActivityVc.costHolder = activities[indexPath.row].cost
-                
-            }
-        }
-        
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        App.Memory.selectedProject = projects[indexPath.row]
     }
 
     /*
@@ -110,4 +99,3 @@ class ActivityTableViewController: UITableViewController {
     */
 
 }
-*/
