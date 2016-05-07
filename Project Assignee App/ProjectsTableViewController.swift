@@ -10,10 +10,17 @@ import UIKit
 
 class ProjectsTableViewController: UITableViewController {
     
+    
+    @IBOutlet weak var profileButton: UIBarButtonItem!
+    
+    
     var projects = [Project]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileButton.target = self.revealViewController()
+        profileButton.action = Selector("revealToggle:")
         
         projects = App.Data.Projects
 

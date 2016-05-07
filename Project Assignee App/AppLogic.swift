@@ -149,6 +149,8 @@ class App{
         assignees[0].Id = 1
         assignees[0].Name = "Craig Federighi";
         assignees[0].JobTitle = "Architect";
+        assignees[0].ContactEmail = "Federighi@gmail.com"
+        assignees[0].ContactPhone = "07930484028"
         
         assignees[1].Id = 2
         assignees[1].Name = "Emannuel Ebate";

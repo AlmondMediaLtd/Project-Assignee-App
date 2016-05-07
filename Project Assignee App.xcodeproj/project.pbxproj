@@ -29,6 +29,8 @@
 		BE88FACB1CC94545003FDAF6 /* CurrentActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88FACA1CC94545003FDAF6 /* CurrentActivityViewController.swift */; };
 		BE88FACE1CC9458A003FDAF6 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88FACD1CC9458A003FDAF6 /* AddActivityViewController.swift */; };
 		BE88FAD01CC94B39003FDAF6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88FACF1CC94B39003FDAF6 /* Model.swift */; };
+		BEC4AFF51CDE7612001F995E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC4AFF41CDE7612001F995E /* SWRevealViewController.m */; };
+		BEC4AFF81CDE7DF4001F995E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4AFF71CDE7DF4001F995E /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,10 @@
 		BE88FACA1CC94545003FDAF6 /* CurrentActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentActivityViewController.swift; sourceTree = "<group>"; };
 		BE88FACD1CC9458A003FDAF6 /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		BE88FACF1CC94B39003FDAF6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BEC4AFF21CDE7611001F995E /* Project Assignee App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project Assignee App-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEC4AFF31CDE7612001F995E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		BEC4AFF41CDE7612001F995E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		BEC4AFF71CDE7DF4001F995E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,7 @@
 			children = (
 				BE748DB21CC6A36200DD7281 /* AppDelegate.swift */,
 				BE748DB61CC6A36200DD7281 /* Main.storyboard */,
+				BEC4AFF71CDE7DF4001F995E /* ProfileViewController.swift */,
 				BE88FACF1CC94B39003FDAF6 /* Model.swift */,
 				BE1BE8791CD3F82700020CC4 /* ProjectsTableViewController.swift */,
 				BE88FAC71CC944E3003FDAF6 /* Tasks */,
@@ -123,6 +130,7 @@
 				BE748DBE1CC6A36200DD7281 /* Info.plist */,
 				BE1BE8681CD282AC00020CC4 /* App Logic */,
 				BE1BE8611CD281F500020CC4 /* App Model */,
+				BEC4AFF61CDE7623001F995E /* Support */,
 			);
 			path = "Project Assignee App";
 			sourceTree = "<group>";
@@ -145,6 +153,16 @@
 				BE88FACD1CC9458A003FDAF6 /* AddActivityViewController.swift */,
 			);
 			name = Activity;
+			sourceTree = "<group>";
+		};
+		BEC4AFF61CDE7623001F995E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BEC4AFF21CDE7611001F995E /* Project Assignee App-Bridging-Header.h */,
+				BEC4AFF31CDE7612001F995E /* SWRevealViewController.h */,
+				BEC4AFF41CDE7612001F995E /* SWRevealViewController.m */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +243,7 @@
 				BE1BE8741CD283CC00020CC4 /* DataLogic.swift in Sources */,
 				BE1BE86C1CD2837100020CC4 /* AppMemory.swift in Sources */,
 				BE1BE86E1CD2837B00020CC4 /* CoreExtensions.swift in Sources */,
+				BEC4AFF51CDE7612001F995E /* SWRevealViewController.m in Sources */,
 				BE88FAD01CC94B39003FDAF6 /* Model.swift in Sources */,
 				BE1BE86A1CD282C200020CC4 /* UtilityCode.swift in Sources */,
 				BE1BE8781CD3ED6C00020CC4 /* ActivityTableViewCell.swift in Sources */,
@@ -235,6 +254,7 @@
 				BE88FACE1CC9458A003FDAF6 /* AddActivityViewController.swift in Sources */,
 				BE1BE8651CD2821900020CC4 /* DataModel.swift in Sources */,
 				BE1BE87C1CD400B400020CC4 /* UiLogic.swift in Sources */,
+				BEC4AFF81CDE7DF4001F995E /* ProfileViewController.swift in Sources */,
 				BE88FACB1CC94545003FDAF6 /* CurrentActivityViewController.swift in Sources */,
 				BE88FAC61CC944D4003FDAF6 /* CurrentTaskViewController.swift in Sources */,
 			);
@@ -349,10 +369,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Project Assignee App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.almond-media.Project-Assignee-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project Assignee App/Project Assignee App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -360,10 +383,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Project Assignee App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.almond-media.Project-Assignee-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project Assignee App/Project Assignee App-Bridging-Header.h";
 			};
 			name = Release;
 		};
