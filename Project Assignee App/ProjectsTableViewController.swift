@@ -22,6 +22,12 @@ class ProjectsTableViewController: UITableViewController {
         profileButton.target = self.revealViewController()
         profileButton.action = Selector("revealToggle:")
         
+        if self.revealViewController() != nil {
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
+        
         projects = App.Data.Projects
 
         // Uncomment the following line to preserve selection between presentations
