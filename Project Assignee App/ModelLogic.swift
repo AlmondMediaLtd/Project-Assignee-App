@@ -60,6 +60,23 @@ extension App {
         }
     }
     
+    static func getAssigneesTasks(assignee : Assignee) -> [Task] {
+        
+        let projects = App.Data.Projects
+        
+        var tasks: [Task] = []
+        
+        for project in projects {
+            
+            let newTasks = project.ProjectItems[0].Tasks.filter{$0.Assignee_Id == assignee.Id}
+            
+            tasks += newTasks
+        }
+        
+        return tasks
+        
+    }
+    
 }
 
 

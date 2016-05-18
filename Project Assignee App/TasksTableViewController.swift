@@ -12,10 +12,23 @@ class TasksTableViewController: UITableViewController {
     
     var tasks = [Task]()
 
+    @IBOutlet weak var profileButton: UIBarButtonItem!
+    
+    let selectedAssignee = App.Memory.selectedAssignee!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tasks = App.Data.Projects[0].ProjectItems[0].Tasks
+        tasks = App.getAssigneesTasks(selectedAssignee)
+        
+        profileButton.target = self.revealViewController()
+        profileButton.action = Selector("revealToggle:")
+        
+        if self.revealViewController() != nil {
+            
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -45,6 +58,8 @@ class TasksTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("task-cell", forIndexPath: indexPath)
 
         cell.textLabel?.text = tasks[indexPath.row].Title
+        
+        cell.detailTextLabel?.text = App.Data.Projects[0].Title
 
         return cell
     }

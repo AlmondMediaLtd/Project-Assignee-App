@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0239441CEC778400F5FDE3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0239431CEC778400F5FDE3 /* LoginViewController.swift */; };
+		BE0239461CEC779B00F5FDE3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0239451CEC779B00F5FDE3 /* RegisterViewController.swift */; };
 		BE1BE8651CD2821900020CC4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8621CD2821900020CC4 /* DataModel.swift */; };
 		BE1BE8661CD2821900020CC4 /* ModelCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8631CD2821900020CC4 /* ModelCategories.swift */; };
 		BE1BE8671CD2821900020CC4 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BE8641CD2821900020CC4 /* TemplateModel.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE0239431CEC778400F5FDE3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BE0239451CEC779B00F5FDE3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		BE1BE8621CD2821900020CC4 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		BE1BE8631CD2821900020CC4 /* ModelCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCategories.swift; sourceTree = "<group>"; };
 		BE1BE8641CD2821900020CC4 /* TemplateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE0239471CECA30700F5FDE3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BE0239451CEC779B00F5FDE3 /* RegisterViewController.swift */,
+				BE0239431CEC778400F5FDE3 /* LoginViewController.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		BE1BE8611CD281F500020CC4 /* App Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 				BEC4AFF71CDE7DF4001F995E /* ProfileViewController.swift */,
 				BE88FACF1CC94B39003FDAF6 /* Model.swift */,
 				BE1BE8791CD3F82700020CC4 /* ProjectsTableViewController.swift */,
+				BE0239471CECA30700F5FDE3 /* Authentication */,
 				BE88FAC71CC944E3003FDAF6 /* Tasks */,
 				BE88FACC1CC94550003FDAF6 /* Activity */,
 				BE748DB91CC6A36200DD7281 /* Assets.xcassets */,
@@ -246,9 +260,11 @@
 				BEC4AFF51CDE7612001F995E /* SWRevealViewController.m in Sources */,
 				BE88FAD01CC94B39003FDAF6 /* Model.swift in Sources */,
 				BE1BE86A1CD282C200020CC4 /* UtilityCode.swift in Sources */,
+				BE0239441CEC778400F5FDE3 /* LoginViewController.swift in Sources */,
 				BE1BE8781CD3ED6C00020CC4 /* ActivityTableViewCell.swift in Sources */,
 				BE1BE8661CD2821900020CC4 /* ModelCategories.swift in Sources */,
 				BE88FAC41CC944A1003FDAF6 /* TasksTableViewController.swift in Sources */,
+				BE0239461CEC779B00F5FDE3 /* RegisterViewController.swift in Sources */,
 				BE748DB31CC6A36200DD7281 /* AppDelegate.swift in Sources */,
 				BE1BE8671CD2821900020CC4 /* TemplateModel.swift in Sources */,
 				BE88FACE1CC9458A003FDAF6 /* AddActivityViewController.swift in Sources */,

@@ -1,34 +1,25 @@
 //
-//  ProfileViewController.swift
+//  RegisterViewController.swift
 //  Project Assignee App
 //
-//  Created by Gladwin Dosunmu on 07/05/2016.
+//  Created by Gladwin Dosunmu on 18/05/2016.
 //  Copyright © 2016 Almond Media. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-    
-    @IBOutlet weak var fullName: UILabel!
-    @IBOutlet weak var jobTitle: UILabel!
-    @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var phoneNumber: UILabel!
-    
-    var currentAssignee: Assignee = App.Memory.selectedAssignee!
+class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var fullName: UITextField!
+    
+    @IBOutlet weak var email: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var contactNumber: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fullName.text = currentAssignee.Name
-        
-        jobTitle.text = currentAssignee.JobTitle
-        
-        email.text = currentAssignee.ContactEmail
-        
-        phoneNumber.text = currentAssignee.ContactPhone
-        
-        
 
         // Do any additional setup after loading the view.
     }
