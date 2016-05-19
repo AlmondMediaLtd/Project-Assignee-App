@@ -10,6 +10,7 @@ import UIKit
 
 class SelectedTaskViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var deadline: UILabel!
     
@@ -23,9 +24,21 @@ class SelectedTaskViewController: UIViewController, UITableViewDataSource, UITab
         
         selectedTask = App.Memory.selectedTask!
         
+        let dueDate = selectedTask.EndDate
+        
+        let daysLeft = UtilityCode.getDaysBetweenDate(NSDate(), endDate: dueDate)
+        
+        deadline.text = "\(daysLeft)"
+        
+        budget.text = "£\(selectedTask.MaxBudget)"
+        
         self.title = selectedTask.Title
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

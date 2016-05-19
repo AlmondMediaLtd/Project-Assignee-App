@@ -10,36 +10,26 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    func displayAlert(title: String, message: String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-        }))
-        
-        self.presentViewController(alert, animated: true, completion: nil)
-        
-    }
-    
     @IBOutlet weak var email: UITextField!
     
     @IBOutlet weak var password: UITextField!
 
     @IBAction func loginButton(sender: AnyObject) {
         
-        if email.text == "email" && password.text == "password" {
-            
-            App.Memory.selectedAssignee = App.Data.Assignees[0]
-            
-            performSegueWithIdentifier("login", sender: self)
-        } else {
-            
-            displayAlert("Error", message: "Email or Password is incorrect. Please try again.")
-            
-        }
+        App.Memory.selectedAssignee = App.Data.Assignees[0]
+        
+        performSegueWithIdentifier("login", sender: self)
+        
+//        if email.text == "email" && password.text == "password" {
+//            
+//            App.Memory.selectedAssignee = App.Data.Assignees[0]
+//            
+//            performSegueWithIdentifier("login", sender: self)
+//        } else {
+//            
+//            UtilityCode.displayAlert("Error", message: "Email or Password is incorrect. Please try again.", viewController: self)
+//            
+//        }
         
     }
     override func viewDidLoad() {

@@ -23,9 +23,11 @@ class CurrentActivityViewController: UIViewController {
         
         selectedActivity = App.Memory.selectedActivity!
         
+        let endDate = UtilityCode.getDateString(selectedActivity.EndDate, format: "dd-MM-yyyy")
+        
         activityTitle.text = selectedActivity.Title
-        activityDueDate.text = "\(selectedActivity.EndDate)"
-        activityCost.text = "\(selectedActivity.Cost)"
+        activityDueDate.text = endDate
+        activityCost.text = "£\(selectedActivity.Cost)"
 
         // Do any additional setup after loading the view.
     }

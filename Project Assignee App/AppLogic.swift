@@ -18,7 +18,7 @@ class App{
         App.PrepareTemplates();
         App.GenerateAssignees();
         App.PrepareProjects();
-        // App.PrepareCustomUI();
+        App.PrepareCustomUI();
         
     }
     
@@ -80,6 +80,7 @@ class App{
         tasks[0].Title = "Design"
         tasks[0].EndDate = NSDate().addDays(7);
         tasks[0].Assignee_Id = 1;
+        tasks[0].MaxBudget = 300.00;
         
         tasks[1].Title = "Building"
         tasks[1].EndDate = NSDate().addDays(20);
