@@ -196,6 +196,7 @@
                     <connections>
                         <outlet property="email" destination="z9C-z7-Qf9" id="NFk-6b-cDh"/>
                         <outlet property="password" destination="IHI-qQ-wdm" id="L1l-jF-C4W"/>
+                        <outlet property="stackView" destination="pY0-kx-wkz" id="jMx-Ui-o5h"/>
                         <segue destination="x0i-XI-B7N" kind="show" identifier="login" id="Iz9-lM-RBT"/>
                     </connections>
                 </viewController>
@@ -811,7 +812,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="fwE-Jx-YYm">
             <objects>
-                <viewController id="x0i-XI-B7N" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Reveal" id="x0i-XI-B7N" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oU7-Pd-shh"/>
                         <viewControllerLayoutGuide type="bottom" id="sWQ-ql-edX"/>
@@ -901,6 +902,13 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9z2-hs-rT4">
+                                <rect key="frame" x="276" y="240" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logOut:" destination="qeI-xd-DE2" eventType="touchUpInside" id="TFC-Vk-Nbe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -910,6 +918,9 @@
                             <constraint firstItem="YhN-J1-3Fd" firstAttribute="top" secondItem="529-zk-gME" secondAttribute="bottom" constant="441" id="Rlx-BS-GVv"/>
                             <constraint firstItem="Jrm-HL-xfK" firstAttribute="centerX" secondItem="0fe-g3-khf" secondAttribute="centerX" id="S80-jJ-V00"/>
                             <constraint firstItem="529-zk-gME" firstAttribute="top" secondItem="gPO-rc-wf1" secondAttribute="bottom" constant="8" id="Tvt-Nr-GL5"/>
+                            <constraint firstItem="YhN-J1-3Fd" firstAttribute="top" secondItem="9z2-hs-rT4" secondAttribute="bottom" constant="330" id="cVa-tP-uqN"/>
+                            <constraint firstItem="9z2-hs-rT4" firstAttribute="centerX" secondItem="0fe-g3-khf" secondAttribute="centerX" id="fhQ-tb-7cm"/>
+                            <constraint firstItem="9z2-hs-rT4" firstAttribute="top" secondItem="Jrm-HL-xfK" secondAttribute="bottom" constant="27" id="lRA-Wh-Pvi"/>
                             <constraint firstItem="8Ve-zL-7e2" firstAttribute="centerX" secondItem="0fe-g3-khf" secondAttribute="centerX" id="mYS-ab-wLz"/>
                             <constraint firstItem="Jrm-HL-xfK" firstAttribute="top" secondItem="8Ve-zL-7e2" secondAttribute="bottom" constant="8" id="nKW-lS-5H3"/>
                             <constraint firstItem="YhN-J1-3Fd" firstAttribute="top" secondItem="Jrm-HL-xfK" secondAttribute="bottom" constant="387" id="w3L-9c-1f2"/>
@@ -918,6 +929,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Rlx-BS-GVv"/>
+                                <exclude reference="w3L-9c-1f2"/>
                             </mask>
                         </variation>
                     </view>

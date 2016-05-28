@@ -15,6 +15,21 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     
+    @IBAction func logOut(sender: AnyObject) {
+        
+        App.Memory.selectedAssignee = nil
+        
+        if let token = FBSDKAccessToken.currentAccessToken() {
+            
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
+        }
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        
+    }
+    
     var currentAssignee: Assignee = App.Memory.selectedAssignee!
 
     override func viewDidLoad() {
