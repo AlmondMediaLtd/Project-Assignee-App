@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
         
         App.Memory.selectedAssignee = nil
         
-        if let token = FBSDKAccessToken.currentAccessToken() {
+        if FBSDKAccessToken.currentAccessToken() != nil {
             
             let loginManager = FBSDKLoginManager()
             loginManager.logOut()

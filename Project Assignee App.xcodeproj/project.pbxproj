@@ -24,6 +24,7 @@
 		BE592F811CF9D3CD0043081D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE592F7E1CF9D3CD0043081D /* FBSDKCoreKit.framework */; };
 		BE592F821CF9D3CD0043081D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE592F7F1CF9D3CD0043081D /* FBSDKLoginKit.framework */; };
 		BE592F831CF9D3CD0043081D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE592F801CF9D3CD0043081D /* FBSDKShareKit.framework */; };
+		BE732A9C1CFC82A6001C8693 /* FacebookCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE732A9B1CFC82A6001C8693 /* FacebookCode.swift */; };
 		BE748DB31CC6A36200DD7281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE748DB21CC6A36200DD7281 /* AppDelegate.swift */; };
 		BE748DB81CC6A36200DD7281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE748DB61CC6A36200DD7281 /* Main.storyboard */; };
 		BE748DBA1CC6A36200DD7281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE748DB91CC6A36200DD7281 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		BE592F7E1CF9D3CD0043081D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BE592F7F1CF9D3CD0043081D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BE592F801CF9D3CD0043081D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		BE732A9B1CFC82A6001C8693 /* FacebookCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookCode.swift; sourceTree = "<group>"; };
 		BE748DAF1CC6A36200DD7281 /* Project Assignee App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Assignee App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE748DB21CC6A36200DD7281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE748DB71CC6A36200DD7281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BE1BE8691CD282C200020CC4 /* UtilityCode.swift */,
+				BE732A9B1CFC82A6001C8693 /* FacebookCode.swift */,
 				BE1BE86B1CD2837100020CC4 /* AppMemory.swift */,
 				BE1BE86D1CD2837B00020CC4 /* CoreExtensions.swift */,
 				BE1BE86F1CD283BB00020CC4 /* ModelLogic.swift */,
@@ -270,6 +273,7 @@
 				BE1BE86A1CD282C200020CC4 /* UtilityCode.swift in Sources */,
 				BE0239441CEC778400F5FDE3 /* LoginViewController.swift in Sources */,
 				BE1BE8781CD3ED6C00020CC4 /* ActivityTableViewCell.swift in Sources */,
+				BE732A9C1CFC82A6001C8693 /* FacebookCode.swift in Sources */,
 				BE1BE8661CD2821900020CC4 /* ModelCategories.swift in Sources */,
 				BE88FAC41CC944A1003FDAF6 /* TasksTableViewController.swift in Sources */,
 				BE0239461CEC779B00F5FDE3 /* RegisterViewController.swift in Sources */,
